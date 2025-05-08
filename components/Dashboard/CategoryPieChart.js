@@ -48,7 +48,7 @@ export default function CategoryPieChart({ transactions }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="relative bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg"
+        className="relative bg-white/5 backdrop-blur-lg rounded-xl p-3 md:p-6 border border-white/20 shadow-lg"
       >
         <div className="flex items-center gap-3 mb-4">
           <PieChartIcon className="w-5 h-5 text-white" />
@@ -70,7 +70,7 @@ export default function CategoryPieChart({ transactions }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="relative bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg"
+        className="relative bg-white/5 backdrop-blur-lg rounded-xl p-3 md:p-6 border border-white/20 shadow-lg"
       >
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">

@@ -10,7 +10,7 @@ const InsightItem = ({ title, value, icon: Icon, color, delay = 0 }) => (
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: delay * 0.1 }}
     whileHover={{ scale: 1.03 }}
-    className="relative overflow-hidden bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all"
+    className="relative overflow-hidden bg-white/5 backdrop-blur-sm p-2 md:p-4 rounded-xl border border-white/10 shadow-lg hover:shadow-xl transition-all"
   >
 
     <div className={`absolute -top-10 -left-10 w-32 h-32 rounded-full ${color.replace('text-', 'bg-')}/10 blur-[40px] z-0`}></div>

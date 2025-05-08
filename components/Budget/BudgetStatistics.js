@@ -10,13 +10,11 @@ import { useState } from "react";
 export default function BudgetStatistics({ transactions, budgets }) {
   const [viewMode, setViewMode] = useState("category");
 
-  // Calculate total spent per category
   const spentByCategory = {};
   transactions.forEach((txn) => {
     spentByCategory[txn.category] = (spentByCategory[txn.category] || 0) + txn.amount;
   });
 
-  // Calculate spent per month
   const spentByMonth = {};
   transactions.forEach((txn) => {
     const monthYear = txn.monthYear || new Date(txn.date).toLocaleString('default', { month: 'long', year: 'numeric' });
@@ -62,7 +60,7 @@ export default function BudgetStatistics({ transactions, budgets }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="relative bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg"
+        className="relative bg-white/5 backdrop-blur-lg rounded-xl p-3 md:p-6 border border-white/20 shadow-lg"
       >
         <div className="flex items-center gap-3 mb-4">
           <TrendingUp className="w-5 h-5 text-white" />
@@ -83,7 +81,7 @@ export default function BudgetStatistics({ transactions, budgets }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="relative bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg"
+        className="relative bg-white/5 backdrop-blur-lg rounded-xl p-3 md:p-6 border border-white/20 shadow-lg"
       >
         <div className="flex items-center gap-3 mb-6">
           <TrendingUp className="w-5 h-5 text-white" />
@@ -103,7 +101,7 @@ export default function BudgetStatistics({ transactions, budgets }) {
           </div>
         </div>
 
-        <div className="h-[300px]">
+        <div className="h-[300px] -ml-5">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data} margin={{ top: 20, right: 30, left: 0, bottom: 5 }} barGap={0} barCategoryGap={20}>
               <defs>

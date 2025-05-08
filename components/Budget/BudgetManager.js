@@ -14,7 +14,7 @@ const BudgetItem = ({ budget, spent, onEdit, onDelete }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
-      className="px-4 py-3 rounded-lg bg-white/10 backdrop-blur-lg border border-white/20 shadow-sm mb-3 last:mb-0"
+      className="px-3 pt-1 rounded-lg bg-white/10 backdrop-blur-lg border border-white/20 shadow-sm mb-3 last:mb-0"
     >
       <div className="flex justify-between items-center">
         <div className="flex-1">
@@ -247,7 +247,7 @@ export default function BudgetManager({ transactions, budgets, onBudgetUpdate })
         className="relative"
       >
         <form onSubmit={handleSubmit} className="mb-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4 p-2">
             <div>
               <label className="block text-sm font-medium text-white/80 mb-1">
                 Category
@@ -334,7 +334,7 @@ export default function BudgetManager({ transactions, budgets, onBudgetUpdate })
           </Button>
         </form>
 
-        <div className="space-y-3 relative z-10 max-h-[400px] overflow-y-auto pr-2">
+        <div className="space-y-3 relative z-10 max-h-[300px] overflow-y-auto pr-2">
           {budgets.length === 0 ? (
             <motion.div
               initial={{ opacity: 0 }}

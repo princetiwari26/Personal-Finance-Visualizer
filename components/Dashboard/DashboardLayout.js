@@ -48,10 +48,10 @@ export default function DashboardLayout() {
     fetchBudgets();
   }, [fetchTransactions, fetchBudgets]);
 
-  const cardClasses = "bg-white dark:bg-black p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700";
+  const cardClasses = "bg-white dark:bg-black p-1 md:p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700";
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-black p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-gray-100 dark:bg-black p-1 md:p-3 relative overflow-hidden">
       {/* Animated Background */}
       <motion.div
         className="absolute inset-0 opacity-20"
@@ -77,7 +77,7 @@ export default function DashboardLayout() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
 
           <div className={cardClasses}>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">Budgets</h2>
+            <h2 className="text-xl font-semibold mb-4 dark:text-white m-2">Budgets</h2>
             <BudgetManager
               transactions={transactions}
               budgets={budgets}

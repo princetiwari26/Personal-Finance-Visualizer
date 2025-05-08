@@ -34,3 +34,16 @@
 .delay-500 {
   animation-delay: 500ms;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #979797;
+  border-radius: 6px;
+}

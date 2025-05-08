@@ -85,7 +85,7 @@ export default function TransactionForm({ fetchTransactions }) {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="relative bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg"
+        className="relative bg-white/5 backdrop-blur-lg rounded-xl p-3 md:p-6 border border-white/20 shadow-lg"
       >
         <h2 className="text-xl font-semibold mb-4 text-white flex items-center gap-2">
           ₹ Add Transaction
